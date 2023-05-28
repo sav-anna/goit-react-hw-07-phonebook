@@ -1,16 +1,19 @@
-export const App = () => {
+import ContactForm from './ContactForm/ContactForm';
+import Filter from './Filter';
+import ContactList from './Contact/ContactList';
+import { useFetchContactsQuery } from 'redux/contactsApi';
+
+export default function App() {
+  const { data, isFetching } = useFetchContactsQuery();
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <ContactForm />
+      <Filter />
+      {data?.length > 0 ? (
+        <ContactList contacts={data} />
+      ) : (
+        <p className="app">You don’t have any contacts yet...🥺</p>
+      )}
     </div>
   );
-};
+}

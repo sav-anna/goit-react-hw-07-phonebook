@@ -1,0 +1,30 @@
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 25px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.contactItem:not(:last-child) {
+  margin-bottom: 20px;
+}
+.contactItem__btn {
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #1a8694;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contactItem__btn:hover,
+.contactItem__btn:focus {
+  background-color: #0d504c;
+  color: #ffffff;
+}

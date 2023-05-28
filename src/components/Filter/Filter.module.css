@@ -1,0 +1,32 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.filter__title {
+  font-size: 40px;
+  font-weight: 600;
+  color: #1a8694;
+  margin: 0;
+}
+.filter__label {
+  color: #0d504c;
+  font-size: 25px;
+  font-weight: 500;
+}
+.filter__input {
+  margin-left: 20px;
+  height: 20px;
+  width: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #1a8694;
+  font-size: 30px;
+  color: rgba(39, 39, 39, 0.813);
+}
+.filter::placeholder {
+  font-size: 20px;
+}

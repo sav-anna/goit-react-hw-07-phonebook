@@ -4,7 +4,7 @@ import ContactList from './Contact/ContactList';
 import { useFetchContactsQuery } from 'redux/contactsApi';
 
 export default function App() {
-  const { data, isFetching } = useFetchContactsQuery();
+  const { data } = useFetchContactsQuery();
   return (
     <div>
       <ContactForm />
